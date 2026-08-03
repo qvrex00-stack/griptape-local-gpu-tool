@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Model cache (자동 다운로드)
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

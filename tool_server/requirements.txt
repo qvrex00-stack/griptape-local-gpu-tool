@@ -1,0 +1,11 @@
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+pillow>=11.0.0
+transformers>=4.40.0
+controlnet-aux>=0.0.7
+opencv-python
+numpy
+requests
+scipy>=1.10.0
+static-ffmpeg

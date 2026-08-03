@@ -1,0 +1,66 @@
+{
+  "name": "Local GPU Tools Library",
+  "library_schema_version": "0.10.0",
+  "settings": [],
+  "metadata": {
+    "author": "Custom",
+    "description": "Local GPU tool nodes - Depth Estimation, Pose Extraction, Pose Smoothing, Video Blending",
+    "library_version": "0.2.0",
+    "engine_version": "0.89.0",
+    "tags": ["local", "gpu", "depth", "pose", "tools", "video"],
+    "dependencies": {
+      "pip_dependencies": ["requests", "pillow>=11.0.0"]
+    },
+    "declarations": []
+  },
+  "widgets": [],
+  "categories": [],
+  "nodes": [
+    {
+      "class_name": "DepthExtractor",
+      "file_path": "nodes/depth_extractor.py",
+      "metadata": {
+        "category": "Image Nodes",
+        "description": "Extract depth map from image or video using Depth Anything V2.",
+        "display_name": "Depth Extractor",
+        "icon": "layers",
+        "tags": ["image", "video", "depth", "local", "tools"]
+      }
+    },
+    {
+      "class_name": "PoseExtractor",
+      "file_path": "nodes/pose_extractor.py",
+      "metadata": {
+        "category": "Image Nodes",
+        "description": "Extract human pose skeleton from image or video using OpenPose.",
+        "display_name": "Pose Extractor",
+        "icon": "user",
+        "tags": ["image", "video", "pose", "openpose", "local", "tools"]
+      }
+    },
+    {
+      "class_name": "PoseSmoothing",
+      "file_path": "nodes/pose_smoothing.py",
+      "metadata": {
+        "category": "Video",
+        "description": "Smooth OpenPose keypoints across frames to fix jitter and missing limbs in fast action sequences.",
+        "display_name": "Pose Smoothing",
+        "icon": "activity",
+        "tags": ["video", "pose", "smoothing", "keypoint", "local", "tools"]
+      }
+    },
+    {
+      "class_name": "BlendVideos",
+      "file_path": "nodes/blend_videos.py",
+      "metadata": {
+        "category": "Video",
+        "description": "Blend depth video and pose video for Wan control_video. Alpha controls depth/pose balance.",
+        "display_name": "Blend Videos (Depth+Pose)",
+        "icon": "blend",
+        "tags": ["video", "depth", "pose", "blend", "control", "local", "tools"]
+      }
+    }
+  ],
+  "workflows": [],
+  "is_default_library": false
+}
